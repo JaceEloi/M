@@ -1,0 +1,220 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class AppDeMemorizacao {
+
+    
+
+   
+
+
+public static void main(String[] args) {
+        
+       
+Scanner scanner = new Scanner(System.in);
+        
+       
+Random random = new Random();
+        String[] cores = {
+        String[] cores
+
+       
+"Vermelho", "Verde", "Azul", "Amarelo", "Laranja", "Roxo"};
+        
+        
+        
+       
+
+        
+int nivel = 1;
+        
+       
+int sequenciaAtual = 0;
+        
+       
+int maxSequencia = 2;  // Número inicial de cores na sequência
+
+        System.out.println(
+
+        System
+
+
+       
+
+
+"Bem-vindo ao App de Memorização!");
+
+        
+
+       
+
+
+while (sequenciaAtual < maxSequencia) {
+            System.out.println(
+           
+"Nível " + nivel);
+            System.out.println("Lembre-se da sequência de cores:");
+            
+            String[] sequencia = new String[maxSequencia];
+            
+            
+            
+           
+
+            
+// Gerar sequência aleatória
+            
+           
+for (int i = 0; i < maxSequencia; i++) {
+                
+               
+int indiceCor = random.nextInt(cores.length);
+                sequencia[i] = cores[indiceCor];
+                System.out.print(sequencia[i] + 
+                sequencia[i] = cores[indiceCor];
+                System.out.print(sequencia[i] +
+
+                sequencia[i] = cores[indiceCor];
+               
+
+                sequencia[i] = cores[indiceCor];
+
+                sequencia
+
+               
+" ");
+            }
+            System.out.println();
+            
+            
+            }
+            System.out.println();
+            
+           
+
+            }
+            System.out.println();
+            
+
+            }
+           
+
+            }
+// Pedir ao usuário para repetir a sequência
+            System.out.println(
+            System.out.println
+
+           
+"Digite a sequência de cores (separadas por espaço):");
+            
+           
+String entrada = scanner.nextLine();
+            String[] entradaUsuario = entrada.split(
+           
+" ");
+            
+            
+            
+           
+
+            
+// Verificar se a entrada do usuário está correta
+            
+           
+boolean sequenciaCorreta = true;
+            
+           
+for (int i = 0; i < maxSequencia; i++) {
+                
+               
+if (!entradaUsuario[i].equalsIgnoreCase(sequencia[i])) {
+                    sequenciaCorreta = 
+                   
+false;
+                    break;
+                }
+            }
+            
+            
+                }
+            }
+            
+           
+
+                }
+            }
+            
+
+               
+if (sequenciaCorreta) {
+                System.out.println(
+                System.out
+
+               
+"Parabéns! Você acertou.");
+                sequenciaAtual++;
+            } 
+                sequenciaAtual++;
+           
+
+                sequenciaAtual++;
+
+               
+else {
+                System.out.println(
+                System.out
+
+               
+"Ops! Você errou. Tente novamente.");
+                sequenciaAtual = 
+               
+0;
+            }
+            
+            
+            }
+            
+           
+
+            }
+            
+if (sequenciaAtual == maxSequencia) {
+                nivel++;
+                maxSequencia++;  
+                nivel++;
+                maxSequencia++;
+
+                nivel++;
+                max
+
+                nivel++;
+               
+
+                nivel++;
+// Aumentar o número de cores na sequência
+                sequenciaAtual = 0;
+            }
+        }
+
+        System.out.println(
+            }
+        }
+
+        System.out
+
+            }
+        }
+
+       
+
+            }
+        }
+
+
+            }
+       
+
+            }
+"Parabéns! Você completou o jogo!");
+    }
+}
